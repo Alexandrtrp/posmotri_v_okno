@@ -16,7 +16,10 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  padding: 133px 0 133px;
 }
+
+/* Текстовый шрифт написан в селекторе .page */
 
 h1,
 h2,
@@ -179,6 +182,7 @@ ol {
 }
 
 .result__video {
+  object-fit: fill;
   width: 100%;
   height: 386px;
 }
@@ -204,7 +208,7 @@ ol {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  background-color: black;
+  background: transparent;
   border: 1px solid #fff;
   cursor: pointer;
   height: 34px;
@@ -218,6 +222,15 @@ ol {
 .more-button {
   min-width: 100%;
 }
+
+.search-form__label:has(.search-form__textfield):hover {
+  text-decoration: none;
+  cursor: text;
+  outline: none;
+}
+
+/* Не понял почему бордер топ тут лишний, в макете он есть
+и сверху и снизу */
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
@@ -253,13 +266,19 @@ ol {
   position: absolute;
 }
 
+input[type="checkbox"]:checked + span {
+  width: 19px;
+  height: 19px; 
+  background: #fff;
+}
+
 .search-form__pseudo-checkbox:active {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.search-form__label:hover {
+.search-form__label:hover{
   text-decoration: underline;
 }
 
@@ -282,11 +301,27 @@ ol {
 }
 
 .search-form__submit-button:focus {
-  border: none;
   outline: none;
 }
 
 .search-form__submit-button:focus-visible {
+  border: 1px solid #fff double;
+}
+
+.more-button:active {
+  background: #545050;
+}
+
+.more-button:hover {
+  text-decoration: underline;
+}
+
+.more-button:focus {
+  border: none;
+  outline: none;
+}
+
+.more-button:focus-visible {
   border: double;
 }
 
@@ -303,11 +338,9 @@ ol {
   outline: none;
 }
 
+ /* Вот состояние фокуса для блока карточек */
+
 .content__card-link:focus-visible {
   margin: 2px;
   outline: 1px solid #fff;
-}
-
-.more-button:active {
-  background: #545050;
 }
