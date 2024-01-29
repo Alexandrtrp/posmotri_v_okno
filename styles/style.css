@@ -125,7 +125,7 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -141,7 +141,7 @@ ol {
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -196,7 +196,8 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
+  object-fit: contain;
+  height: 103px; 
 }
 /* 
 Как тут использовать object-fit я не понимаю
@@ -205,13 +206,14 @@ ol {
 то она расстянется на всю ширину и это свойство ее не уменьшит */
 
 .content__video-card-description-container {
-  width: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .button {
   color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -350,6 +352,7 @@ input[type="checkbox"]:checked + span {
  /* Вот состояние фокуса для блока карточек */
 
 .content__card-link:focus-visible {
+  display: block;
   margin: 2px;
   border: 1px solid #fff;
 }
