@@ -114,7 +114,7 @@ ol {
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -196,14 +196,11 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   height: 103px; 
+
 }
-/* 
-Как тут использовать object-fit я не понимаю
-Картинку ведь не нужно расстягивать, она должна занять
-конкретное место в блоке. Если убрать явные размеры,
-то она расстянется на всю ширину и это свойство ее не уменьшит */
 
 .content__video-card-description-container {
   flex-grow: 1;
